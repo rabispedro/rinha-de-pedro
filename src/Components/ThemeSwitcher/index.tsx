@@ -16,7 +16,6 @@ const ThemeSwitcher: React.FC<ColorModeSwitcherProps> = (props) => {
 	return (
 		<>
 		<IconButton
-
 			fontSize="lg"
 			variant="ghost"
 			color="current"

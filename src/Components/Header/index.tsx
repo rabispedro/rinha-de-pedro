@@ -1,4 +1,4 @@
-import { Flex, HStack, Image, Text } from "@chakra-ui/react";
+import { Flex, HStack, Image, Link, Text } from "@chakra-ui/react";
 import { MdAccountCircle } from "react-icons/md";
 import Logo from "../../assets/icons/logo.svg";
 import { ThemeSwitcher } from "../ThemeSwitcher";
@@ -32,6 +32,9 @@ const Header: React.FC = () => {
 
 					spacing="4"
 				>
+					<Link>Home</Link>
+					<Link>Betters</Link>
+					<Link>About</Link>
 					<ThemeSwitcher />
 				</HStack>
 			</Flex>
