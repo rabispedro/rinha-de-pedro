@@ -1,9 +1,11 @@
 import { Flex, VStack } from "@chakra-ui/react";
+import { TechInfoCard } from "Components/TechInfoCard";
 import PedroFlorencio from "../../assets/images/pedro-florencio.jpeg";
 import PedroRabis from "../../assets/images/pedro-rabis.jpeg";
 import Victor from "../../assets/images/victor.jpeg";
 import { DeveloperCard } from "../../Components/DeveloperCard";
 import { Header } from "../../Components/Header";
+import { MdInfo } from "react-icons/md";
 
 const About: React.FC = () => {
 	return (
@@ -12,7 +14,25 @@ const About: React.FC = () => {
 				direction="column"
 			>
 
-				<Header />
+				<Header
+					pageName="About"
+					pageIcon={MdInfo}
+				/>
+
+				<Flex
+					alignItems="center"
+					justifyContent="space-evenly"
+					// maxW="32rem"
+					// minW="20rem"
+					// maxH="12rem"
+					// minH="8rem"
+					bg="light.background"
+					border="2px"
+					borderColor="light.secondary"
+					borderRadius="1.5rem"
+					p="1rem"
+					m="1rem"
+				>
 
 				<VStack
 					spacing="1rem"
@@ -38,7 +58,10 @@ const About: React.FC = () => {
 						description="Estagiário na Arpia, estudante na Uniessa e craque no FIFA."
 						photo={Victor}
 					/>
-				</ VStack>
+				</VStack>
+
+				<TechInfoCard />
+				</Flex>
 			</Flex>
 		</>
 	);
