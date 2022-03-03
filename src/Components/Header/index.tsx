@@ -1,9 +1,14 @@
-import { Flex, HStack, Image, Link, Text } from "@chakra-ui/react";
-import { MdAccountCircle } from "react-icons/md";
+import { Flex, HStack, Icon, Image, Link, Text } from "@chakra-ui/react";
+import { IconType } from "react-icons";
 import Logo from "../../assets/icons/logo.svg";
 import { ThemeSwitcher } from "../ThemeSwitcher";
 
-const Header: React.FC = () => {
+interface HeaderProps {
+	pageName: string,
+	pageIcon: IconType
+}
+
+const Header: React.FC<HeaderProps> = ({ pageName, pageIcon }) => {
 	return (
 		<>
 			<Flex
@@ -19,18 +24,28 @@ const Header: React.FC = () => {
 				<Image
 					src={Logo}
 					alt="Rinha de Pedro"
-					boxSize="14rem"
+					// boxSize="14rem"
+					h="100%"
+					w="auto"
 				/>
-				{/* <Icon  src={MdAccountCircle} /> */}
-				<HStack>
-					<MdAccountCircle />
-					<Text>Testo de teste</Text>
+				<HStack
+					spacing="1rem"
+				>
+					<Icon
+						as={pageIcon}
+						w="2rem"
+						h="2rem"
+						borderRadius="50%"
+					/>
+					<Text
+						fontSize="1.5rem"
+					>{pageName}</Text>
 				</HStack>
 				<HStack
 					alignItems="center"
 					justifyContent="space-between"
 
-					spacing="4"
+					spacing="1rem"
 				>
 					<Link>Home</Link>
 					<Link>Betters</Link>
