@@ -1,5 +1,5 @@
 import { Flex, VStack } from "@chakra-ui/react";
-import { TechInfoCard } from "Components/TechInfoCard";
+import { TechInfoCard } from "../../Components/TechInfoCard";
 import PedroFlorencio from "../../assets/images/pedro-florencio.jpeg";
 import PedroRabis from "../../assets/images/pedro-rabis.jpeg";
 import Victor from "../../assets/images/victor.jpeg";

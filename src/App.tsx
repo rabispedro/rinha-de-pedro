@@ -1,16 +1,16 @@
 import { ChakraProvider } from '@chakra-ui/react';
 import React from 'react';
+import { GlobalStyle } from "./styles/GlobalStyle";
+import { Template } from './Template';
 import './App.css';
-import { About } from './Pages/About';
 import { theme } from "./styles/theme";
 
 const App: React.FC = () => {
   return (
     <>
 			<ChakraProvider theme={theme} >
-
-			<About />
-
+			{/* <GlobalStyle /> */}
+			<Template />
 			</ChakraProvider>
 		</>
   );

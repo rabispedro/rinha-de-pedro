@@ -1,11 +1,12 @@
-import { Flex, HStack, Icon, Image, Link, Text } from "@chakra-ui/react";
-import { IconType } from "react-icons";
+import { Flex, HStack, Icon, Image, Text } from "@chakra-ui/react";
+import { ElementType } from "react";
+import { Link } from "react-router-dom";
 import Logo from "../../assets/icons/logo.svg";
 import { ThemeSwitcher } from "../ThemeSwitcher";
 
 interface HeaderProps {
 	pageName: string,
-	pageIcon: IconType
+	pageIcon: ElementType
 }
 
 const Header: React.FC<HeaderProps> = ({ pageName, pageIcon }) => {
@@ -47,9 +48,23 @@ const Header: React.FC<HeaderProps> = ({ pageName, pageIcon }) => {
 
 					spacing="1rem"
 				>
-					<Link>Home</Link>
-					<Link>Betters</Link>
-					<Link>About</Link>
+					<Link
+						to="/"
+					>
+						Home
+					</Link>
+
+					<Link
+					to="/betters">
+						Betters
+					</Link>
+
+					<Link
+					to="/about"
+					>
+						About
+					</Link>
+
 					<ThemeSwitcher />
 				</HStack>
 			</Flex>
