@@ -14,11 +14,6 @@ const About: React.FC = () => {
 				direction="column"
 			>
 
-				<Header
-					pageName="About"
-					pageIcon={MdInfo}
-				/>
-
 				<Flex
 					alignItems="center"
 					justifyContent="space-evenly"
