@@ -26,7 +26,7 @@ const Home: React.FC = () => {
 				<Text
 					fontSize={["0.75rem", "2rem"]}
 				>
-					Cadastro de apostadores
+					Cadastro de Apostadores
 				</Text>
 			</Flex>
 		</>
