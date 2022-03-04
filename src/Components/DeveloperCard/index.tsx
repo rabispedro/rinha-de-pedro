@@ -1,5 +1,4 @@
-import { Avatar, Flex, Image, Spacer, Text } from "@chakra-ui/react";
-import { Link } from "react-router-dom";
+import { Avatar, Flex, Link, Image, Spacer, Text } from "@chakra-ui/react";
 import github from "../../assets/icons/github.svg";
 
 interface DeveloperCardProps {
@@ -56,8 +55,11 @@ const DeveloperCard: React.FC<DeveloperCardProps> = ({ name, githubProfile, desc
 						margin="0 0.625rem 0 0"
 					/>
 					<Link
-						to={githubProfile}
-						>
+						color="light.text"
+						href={"https://github.com/" + githubProfile}
+						target="_blank"
+						isExternal
+					>
 						@{githubProfile}
 					</Link>
 				</Flex>
