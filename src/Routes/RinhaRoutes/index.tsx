@@ -8,7 +8,7 @@ const RinhaRoutes: React.FC = () => {
 		<>
 		<Routes>
 			<Route path="/" element={<Home />} />
-			<Route caseSensitive path="/betters" element={<Betters />} />
+			<Route caseSensitive path="/betters" element={<Betters betters={[]}/>} />
 			<Route caseSensitive path="/about" element={<About />} />
 		</Routes>
 		</>

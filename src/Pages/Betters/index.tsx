@@ -1,16 +1,69 @@
-import {HStack,Flex, Accordion, AccordionButton, AccordionIcon} from "@chakra-ui/react";
+import {HStack,Flex, Accordion, AccordionButton, Heading, AccordionIcon} from "@chakra-ui/react";
 import {AccordionItem, AccordionPanel, Box} from "@chakra-ui/react";
 
-const Betters: React.FC = () => {
+interface BettersProps {
+	betters: Better[]
+}
+
+interface Better {
+	id: number,
+	name: string,
+	email: string,
+	phone: string,
+	stacks: Stack[]
+}
+
+interface Stack {
+	language: string,
+	framework: string
+}
+
+const Betters: React.FC<BettersProps> = ({ betters }) => {
+	// CRUD
+	// betters.map(obj => {
+	// 	return (
+	// 		<>
+	// 			<Text>{obj.id}</Text>
+	// 			<Text>{obj.name}</Text>
+	// 			<Text>{obj.email}</Text>
+	// 			<Text>{obj.phone}</Text>
+
+	// 			{obj.stacks.map(currentStack => {
+	// 				return (
+	// 					<>
+	// 					<Text>{currentStack.language}</Text>
+	// 					</>
+	// 				);
+	// 			})}
+
+	// 			{obj.stacks.map(currentStack => {
+	// 				return (
+	// 					<>
+	// 					<Text>{currentStack.framework}</Text>
+	// 					</>
+	// 				);
+	// 			})}
+
+	// 		</>
+	// 	);
+	// })
+
 	return (
 		<>
-			<Flex>
+			<Flex
+				alignItems="center"
+				justifyContent="center"
+				direction="column"
+				// bg="light.background"
+				// border="2px"
+				// borderColor="light.secondary"
+			>
+				<Heading>Betters</Heading>
 				<HStack
-				align='center'
-				w='50%'
-				px='0rem'
-				h={['50px','500px']}
-				justify='center'
+					w='50%'
+					px='0rem'
+					h={['50px','500px']}
+					justifyContent='center'
 				>
 					<Accordion>
 						<AccordionItem>

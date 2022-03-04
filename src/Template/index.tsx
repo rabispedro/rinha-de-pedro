@@ -11,7 +11,7 @@ const Template = () : JSX.Element => {
 			<Header pageIcon={MdAccountCircle} pageName="" />
 			<Flex
 				direction="column"
-				justifyContent="space-around"
+				justifyContent="space-evenly"
 				h={["20rem", "40rem"]}
 				border="2px"
 				borderColor="light.secondary"
